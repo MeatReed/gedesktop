@@ -80,7 +80,15 @@
             :size="200"
           />
         </v-card>
-
+        <v-carousel v-if="selectGame.info.screenshots">
+          <v-carousel-item
+            v-for="(item, i) in selectGame.info.screenshots"
+            :key="i"
+            :src="item.url"
+            reverse-transition="fade-transition"
+            transition="fade-transition"
+          ></v-carousel-item>
+        </v-carousel>
         <v-divider></v-divider>
 
         <v-card-actions>

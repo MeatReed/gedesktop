@@ -32,6 +32,7 @@ module.exports = {
   directories: {
     output: 'build',
   },
+  asar: false,
   // default files: https://www.electron.build/configuration/contents
   files: ['build/**/*', 'main.js'],
   ...windowsOS,
