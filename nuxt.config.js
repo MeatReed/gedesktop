@@ -27,7 +27,7 @@ export default {
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
   env: {
-    appdata: process.env.APPDATA
+    appdata: process.env.APPDATA,
   },
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
@@ -48,10 +48,9 @@ export default {
   axios: {
     credentials: true,
     common: {
-      'Accept': 'application/json, text/plain, */*'
+      Accept: 'application/json, text/plain, */*',
     },
   },
-
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
@@ -73,16 +72,15 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    extend (config, { isDev, isClient }) {
- 
+    extend(config, { isDev, isClient }) {
       config.node = {
-           fs: 'empty'
-       }
+        fs: 'empty',
+      }
 
       // ....
-    }
+    },
   },
   generate: {
-    dir: 'build'
-  }
+    dir: 'build',
+  },
 }

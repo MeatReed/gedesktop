@@ -103,6 +103,13 @@ export default {
   components: {
     QrcodeVue,
   },
+  fetch() {
+    const gamesURL = fs.readFileSync(
+      `${path.join(process.env.APPDATA, 'gedesktop')}/games/ghosteshop.eshop`
+    )
+    const gamesResponse = JSON.parse(gamesURL)
+    this.games = gamesResponse
+  },
   // asyncData() {
   //   return new Promise((resolve) => {
   //     // eslint-disable-next-line nuxt/no-timing-in-fetch-data
@@ -115,33 +122,25 @@ export default {
     return {
       search: '',
       games: null,
-      headers: null,
       selectGame: null,
       dialogGame: false,
       downloadLinks: [],
       tabGame: null,
       QRCodeURL: null,
       headers: [
-      {
-        text: 'Title',
-        align: 'start',
-        value: 'info.title',
-      },
-      { text: 'Description', value: 'info.description' },
-      { text: 'Version', value: 'info.version' },
-      { text: 'Author', value: 'info.author' },
-      { text: 'Size', value: 'info.size' },
-      { text: 'Category', value: 'info.category' },
-      { text: 'Console', value: 'info.console' },
-    ]
+        {
+          text: 'Title',
+          align: 'start',
+          value: 'info.title',
+        },
+        { text: 'Description', value: 'info.description' },
+        { text: 'Version', value: 'info.version' },
+        { text: 'Author', value: 'info.author' },
+        { text: 'Size', value: 'info.size' },
+        { text: 'Category', value: 'info.category' },
+        { text: 'Console', value: 'info.console' },
+      ],
     }
-  },
-  fetch() {
-    const gamesURL = fs.readFileSync(
-      `${path.join(process.env.APPDATA, 'gedesktop')}/games/ghosteshop.eshop`
-    )
-    const gamesResponse = JSON.parse(gamesURL)
-    this.games = gamesResponse
   },
   watch: {
     tabGame(index, item) {

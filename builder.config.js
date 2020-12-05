@@ -4,7 +4,7 @@ const windowsOS = {
   win: {
     icon: ICONS_DIR + 'win-icon.ico',
     publisherName: 'MeatReed',
-    target: 'nsis'
+    target: 'nsis',
   },
 
   nsis: {
@@ -13,15 +13,15 @@ const windowsOS = {
     oneClick: false,
     perMachine: true,
     allowElevation: true,
-    allowToChangeInstallationDirectory: true
-  }
+    allowToChangeInstallationDirectory: true,
+  },
 }
 
 const linuxOS = {
   linux: {
     icon: ICONS_DIR,
-    target: 'deb'
-  }
+    target: 'deb',
+  },
 }
 
 module.exports = {
@@ -30,13 +30,10 @@ module.exports = {
   appId: 'com.meatreed.gedesktop',
   artifactName: 'gedesktop.${ext}',
   directories: {
-    output: 'build'
+    output: 'build',
   },
   // default files: https://www.electron.build/configuration/contents
-  files: [
-    "build/**/*",
-    "main.js"
-  ],
+  files: ['build/**/*', 'main.js'],
   ...windowsOS,
-  ...linuxOS
+  ...linuxOS,
 }
