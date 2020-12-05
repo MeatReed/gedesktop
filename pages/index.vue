@@ -5,7 +5,7 @@
         <v-text-field
           v-model="search"
           append-icon="mdi-magnify"
-          :label="Search"
+          label="Search"
           single-line
           hide-details
         ></v-text-field>
