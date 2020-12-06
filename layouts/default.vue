@@ -4,7 +4,7 @@
     <HeaderMobile />
     <DrawerMobile />
     <v-main>
-      <v-img class="imgCover" src="/banner.png" height="695">
+      <!-- <v-img class="imgCover" src="/banner.png" height="695">
         <v-container fluid class="fill-height align-end">
           <v-row>
             <v-col class="text-center">
@@ -14,8 +14,8 @@
             </v-col>
           </v-row>
         </v-container>
-      </v-img>
-      <nuxt keep-alive />
+      </v-img> -->
+      <nuxt />
     </v-main>
     <Footer />
   </v-app>
@@ -34,7 +34,7 @@ export default {
   margin-top: 40px;
 }
 
-.v-main {
+/* .v-main {
   padding: 0px 0px 0px !important;
-}
+} */
 </style>

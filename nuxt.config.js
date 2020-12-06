@@ -45,12 +45,7 @@ export default {
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {
-    credentials: true,
-    common: {
-      Accept: 'application/json, text/plain, */*',
-    },
-  },
+  axios: {},
 
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
