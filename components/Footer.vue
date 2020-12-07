@@ -7,7 +7,7 @@
       class="lighten-1 white--text text-center footer"
     >
       <v-card-text>
-        <v-btn class="mx-4 white--text" href="https://discord.gg/FPDUSaA" icon>
+        <v-btn class="mx-4 white--text" href="https://discord.gg/3DG4ZVw8tz" icon>
           <v-icon size="24px"> mdi-discord </v-icon>
         </v-btn>
       </v-card-text>
